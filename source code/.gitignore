@@ -1,0 +1,6 @@
+__pycache__/
+*.sqlite3
+employee.txt
+manager.txt
+manager.txt.enc
+decrypt.txt
