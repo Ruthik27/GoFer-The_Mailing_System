@@ -1,3 +1,17 @@
 # BE Project! 2021 - 2022 
-# Healthcare Data Privacy using Homomorphic Encryption with Machine Learning Model
+# Gofer - The Mailing System
+## Implemented using Encryption Algorithms and Steganography Techniques
+
+
+![alt text](./images/home_page.png "Home Page")
+
+![alt text](./images/login_page.png "Login Page")
+
+![alt text](./images/encryption_page.png "Encryption Page")
+
+![alt text](./images/manage_page.png "Manage Page")
+
+![alt text](./images/encrypted_page.png "Encrypted Page")
+
+![alt text](./images/decrypted_page.png "Decrypted Page")
 
