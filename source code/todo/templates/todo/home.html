@@ -1,0 +1,26 @@
+{% extends "todo/base.html" %}
+
+{% block content %}
+
+
+    <br>
+    <br>
+<div class="row justify-content-center mt-5">
+        <div class="col-md-10 text-center">
+
+                 <h1>Design of Encryption Algorithms for Security</h1>
+                 <br>
+                 <br>
+                         <p class ="text-justify">
+            
+                In recent years network security has become an important issue. Encryption has come up as a solution and plays an important role in the information security system. Many techniques are needed to protect the shared data. The present work focuses on cryptography to secure the data while transmitting in the network. Firstly the data which is to be transmitted from sender to receiver in the network must be encrypted using the encryption algorithm in cryptography, user selects via which technique he wants to encrypt/decrypt data. Secondly, by using the decryption technique (as per the user’s choice), the receiver can view the original data. Key is sent via Email using steganography.
+        
+            </p>
+            <br>
+            <hr>
+
+            <a role="button" class="btn btn-primary btn-lg" href="{% url 'loginuser' %}">Get Start</a>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "todo/base.html" %}
+
+{% block content %}
+
+<br>
+
+<h2>Welcome to Inbox , {{user}}</h2>
+
+
+{% if users_mails %}
+
+{% if error %}
+<div class="alert alert-danger" role="alert">
+    Please enter valid subject name
+</div>
+{% endif %}
+
+
+<!-- <div class="col-md-5 ; text-align: center;">
+    <form action ="/mailing/download_mail">
+    
+        <input type="text" name="subject_name" class="form-control" id="subject_name" placeholder="Enter Subject of received data to download file">    
+        <button type="submit" class="btn btn-primary"><i>Download</i> </button>
+    
+    </form>
+</div>     -->
+
+
+{% else %}
+
+    <br>
+    <br>
+    <div class="alert alert-danger" role="alert">
+        You do not have any received data till now
+    </div>
+
+{% endif %}
+
+
+
+<br>
+
+{% for users_mail in users_mails %}
+
+        <div class="chat" style="width: 100%; background: rgb(126, 155, 175); box-shadow: 2px 0px 5px 5px rgb(141, 169, 189);"> 
+            <div style="text-align: left;">
+                <small class="chat-user-special " > <b><i> From : {{ users_mail.sender }}  </b></i>  </small>
+            </div>
+
+            <div style="text-align: center;">
+                <b class="chat-content"> <i>Subject : </i> {{ users_mail.data_file }} </b>
+
+
+            </div>
+            <div style="text-align: right;">
+                <small class="chat-date"><i> {{ users_mail.created_date }} :: {{ users_mail.created_time }} </i></small>
+            </div>
+        </div><br><br>    
+
+
+{% endfor %}
+
+
+
+ {% endblock content %}

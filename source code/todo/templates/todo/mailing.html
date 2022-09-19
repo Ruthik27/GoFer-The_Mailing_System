@@ -1,0 +1,55 @@
+{% extends "todo/base.html" %}
+
+
+{% block content %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            <h2>Compose mail</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+            <form action ="/mailing/mailing_result">
+                <div class="form-group">
+                    <label for="receiver">To</label>
+                    <input type="text" name="receiver" class="form-control" id="receiver">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" class="form-control" id="subject">
+                </div>
+
+                <br>
+
+                <label for="algo">Encryption Technique :</label>  
+                <br>
+
+                <select name="algo" id="algo" >
+
+                    <option value=algo1>AES & RSA</option>                    
+                    <option value=algo2>DES & RSA</option>                    
+                    <option value=algo3>AES & DES</option>                    
+
+                </select>
+                <br>
+                <br>
+                <hr>
+    
+                <button type="submit" class="btn btn-primary">Attach file and send</button>
+              </form>
+
+            <br>
+            <br>
+            <div class="text-center">
+                Need an account? <a href="{% url 'home' %}">Back to Home</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
